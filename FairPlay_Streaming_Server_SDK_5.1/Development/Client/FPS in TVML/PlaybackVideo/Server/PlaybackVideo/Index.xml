@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2022 Apple Inc. All Rights Reserved.
+See the LICENSE folder for this sample’s licensing information.
+*/ -->
+<document>
+    <head>
+        <style>
+            .descriptionLayout {
+            tv-text-max-lines: 8;
+            }
+            
+            @media tv-template and (tv-theme:dark) {
+            .badge {
+            tv-tint-color: rgba(255, 255, 255, 1.0);
+            tv-highlight-color: rgba(0, 0, 0, 1.0);
+            }
+            }
+        </style>
+    </head>
+    <listTemplate>
+        <banner>
+            <title>FairPlay Streaming Media Playback</title>
+        </banner>
+        <list>
+            <section>
+                <listItemLockup onselect="presentVideo(0)">
+                    <title>Movie 1</title>
+                </listItemLockup>
+            </section>
+            <section>
+                <listItemLockup onselect="presentVideo(1)">
+                    <title>Movie 2</title>
+                </listItemLockup>
+            </section>
+            <section>
+                <listItemLockup onselect="presentVideo(2)">
+                    <title>Movie 3</title>
+                </listItemLockup>
+            </section>
+        </list>
+    </listTemplate>
+</document>

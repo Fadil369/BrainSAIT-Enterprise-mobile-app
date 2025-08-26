@@ -1,0 +1,19 @@
+[2025-07-11 14:40:05] This is codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=../codeql-failed-run.sarif --sarif-include-diagnostics -vvv --sarif-category /language:python
+[2025-07-11 14:40:05] Log file was started late.
+[2025-07-11 14:40:06] Running plumbing command: codeql diagnostic export --format=sarif-latest -o=/home/runner/work/copilot-template/codeql-failed-run.sarif --sarif-category=/language:python --sarif-include-diagnostics --warnings=show --diagnostic-dir /home/runner/work/_temp/codeql_databases/python/diagnostic --diagnostic-dir /home/runner/work/_temp/codeql_databases/diagnostic
+[2025-07-11 14:40:06] [DETAILS] diagnostic export> Interpreting diagnostic messages...
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic...
+[2025-07-11 14:40:06] [SPAMMIER] diagnostic export> Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/cli-diagnostics-add-20250711T143958.682Z.json.
+[2025-07-11 14:40:06] [SPAMMIER] diagnostic export> Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/cli-diagnostics-add-20250711T144001.624Z.json.
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/codeql-action...
+[2025-07-11 14:40:06] [SPAMMIER] diagnostic export> Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/codeql-action/codeql-action-2025-07-11T143951.870Z.json.
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors...
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/extractors/python...
+[2025-07-11 14:40:06] [SPAMMIER] diagnostic export> Found diagnostics file /home/runner/work/_temp/codeql_databases/python/diagnostic/cli-diagnostics-add-20250711T144002.742Z.json.
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Looking for diagnostics in /home/runner/work/_temp/codeql_databases/python/diagnostic/tracer...
+[2025-07-11 14:40:06] [SPAMMY] diagnostic export> Won't look for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic since this directory does not exist.
+[2025-07-11 14:40:06] [DETAILS] diagnostic export> Found 3 raw diagnostic messages.
+[2025-07-11 14:40:06] [DETAILS] diagnostic export> Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+[2025-07-11 14:40:06] [DETAILS] diagnostic export> Interpreted diagnostic messages (87ms).
+[2025-07-11 14:40:06] Plumbing command codeql diagnostic export completed.
+[2025-07-11 14:40:06] Exiting with code 0

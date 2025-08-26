@@ -1,0 +1,28 @@
+[{
+	"title": "Movie 1",
+	"subtitle": "September 2022-001",
+	"description": "My encrypted movie.",
+	"artworkImageURL": "https://images.apple.com/v/apple-events/home/t/images/overview/hero__d6adldydsqye_xlarge_2x.jpg",
+	"contentRatingDomain": "tvshow",
+	"contentRatingRanking": 200,
+	"resumeTime": 0,
+	"url": "https://myserver.com/playlist1.m3u8",
+}, {
+    "title": "Movie 2",
+    "subtitle": "September 2022-002",
+    "description": "My encrypted movie.",
+    "artworkImageURL": "https://images.apple.com/v/apple-events/home/t/images/overview/hero__d6adldydsqye_xlarge_2x.jpg",
+    "contentRatingDomain": "tvshow",
+    "contentRatingRanking": 200,
+    "resumeTime": 0,
+    "url": "https://myserver.com/playlist2.m3u8",
+}, {
+    "title": "Movie 3",
+    "subtitle": "September 2022-003",
+    "description": "My encrypted movie.",
+    "artworkImageURL": "https://images.apple.com/v/apple-events/home/t/images/overview/hero__d6adldydsqye_xlarge_2x.jpg",
+    "contentRatingDomain": "tvshow",
+    "contentRatingRanking": 200,
+    "resumeTime": 0,
+    "url": "https://myserver.com/playlist3.m3u8",
+}]

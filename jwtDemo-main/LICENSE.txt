@@ -1,0 +1,19 @@
+10.5	Apple License to Sample  Source Code.
+
+(a)	Apple hereby grants to Issuer and each of its Affiliates and Service Providers a limited, non-exclusive, royalty-free,
+fully paid up, non-assignable, non-sub-licensable, non-transferable worldwide right and license to (i) use and modify
+the Sample Source Code and (ii) distribute the Sample Source Code (or any portion thereof) to a Participating Issuer with
+Apple’s prior written consent, in each case of (i) and (ii), solely to the extent necessary for Issuer and its Affiliates
+and Service Providers to integrate the services Issuer uses for proofing, provisioning, and updating Digital Identity Credentials
+with the Apple ID&V Platform. Issuer agrees not to (and will ensure that none of its Affiliates or Service Providers) use,
+modify, provide or make available to any Person (other than Issuer’s Affiliates and Service Providers) or otherwise exploit
+any of the Sample Source Code, except as provided in the license granted in this Section 10.5(a).
+
+(b)	Subject to Apple’s rights, title and interest in and to the Sample Source Code, Issuer will own all modifications
+made by Issuer or any of its Affiliates or Service Providers to the Sample Source Code for the purpose set forth in the
+license granted in Section 10.5(a) (“Issuer Sample Source Code Modifications”).
+
+(c)	Issuer hereby grants to Apple and each of its Affiliates and Service Providers, a limited, non-exclusive, royalty-free,
+fully paid up, non-sub-licensable, non-transferable, perpetual, irrevocable, worldwide right and license to use any Issuer Sample
+Source Code Modifications solely to the extent necessary to operate the Apple ID&V Platform and to enable Issuer and its Affiliates
+to use the Apple ID&V Platform.

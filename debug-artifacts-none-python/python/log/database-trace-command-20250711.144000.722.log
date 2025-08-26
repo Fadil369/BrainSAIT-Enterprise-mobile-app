@@ -1,0 +1,128 @@
+[2025-07-11 14:40:00] This is codeql database trace-command --use-build-mode --working-dir /home/runner/work/copilot-template/copilot-template --verbosity=progress++ /home/runner/work/_temp/codeql_databases/python
+[2025-07-11 14:40:00] Log file was started late.
+[2025-07-11 14:40:00] [DETAILS] database trace-command> Processing /home/runner/work/_temp/codeql_databases/python using build mode "none".
+[2025-07-11 14:40:00] Using autobuild script /opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/autobuild.sh.
+[2025-07-11 14:40:00] [PROGRESS] database trace-command> Running command in /home/runner/work/copilot-template/copilot-template: [/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/autobuild.sh]
+[2025-07-11 14:40:00] [build-stderr] /bin/sh: 1: python2: not found
+[2025-07-11 14:40:00] [build-stdout] No directories containing root identifiers were found. Returning working directory as root.
+[2025-07-11 14:40:00] [build-stdout] Will try to guess Python version, as it was not specified in `lgtm.yml`
+[2025-07-11 14:40:00] [build-stdout] Trying to guess Python version based on Trove classifiers in setup.py
+[2025-07-11 14:40:00] [build-stdout] Did not find setup.py (expected it to be at /home/runner/work/copilot-template/copilot-template/setup.py)
+[2025-07-11 14:40:00] [build-stdout] Trying to guess Python version based on travis file
+[2025-07-11 14:40:00] [build-stdout] Did not find any travis files (expected them at either ['/home/runner/work/copilot-template/copilot-template/.travis.yml', '/home/runner/work/copilot-template/copilot-template/travis.yml'])
+[2025-07-11 14:40:00] [build-stdout] Trying to guess Python version based on installed versions
+[2025-07-11 14:40:00] [build-stdout] Wanted to run Python 2, but it is not available. Using Python 3 instead
+[2025-07-11 14:40:00] [build-stdout] This script is running Python 3, but Python 2 is also available (as 'python3')
+[2025-07-11 14:40:00] [build-stdout] Could not guess Python version, will use default: Python 3
+[2025-07-11 14:40:00] [build-stdout] Calling python3 -S /opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python_tracer.py --verbosity 5 -z all -c /home/runner/work/_temp/codeql_databases/python/working/trap_cache -R /home/runner/work/copilot-template/copilot-template
+[2025-07-11 14:40:01] [build-stdout] INFO: The Python extractor has recently stopped extracting the standard library by default. If you encounter problems, please let us know by submitting an issue to https://github.com/github/codeql. It is possible to re-enable extraction of the standard library by setting the environment variable CODEQL_EXTRACTOR_PYTHON_EXTRACT_STDLIB.
+[2025-07-11 14:40:01] [build-stdout] [INFO] Extraction will use the Python 3 standard library.
+[2025-07-11 14:40:01] [build-stdout] [INFO] sys_path is: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Finder path: ['/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] sys path: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python3src.zip', '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] StubFinder: can't find ODASA_TOOLS, using '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools' instead
+[2025-07-11 14:40:01] [build-stdout] [INFO] Python version 3.12.3
+[2025-07-11 14:40:01] [build-stdout] [INFO] Python extractor version 7.1.3
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Source archive: /home/runner/work/_temp/codeql_databases/python/src
+[2025-07-11 14:40:01] [build-stdout] [TRACE] Starting traversal
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/config (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/description (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/shallow (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/logs
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/logs/refs
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/logs/refs/heads
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/logs/refs/heads/main (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/logs/refs/remotes
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/logs/refs/remotes/origin
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/logs/refs/remotes/origin/main (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/logs/refs/remotes/origin/HEAD (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/logs/HEAD (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/hooks
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-push.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/prepare-commit-msg.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-merge-commit.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-receive.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/commit-msg.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/fsmonitor-watchman.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-commit.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/update.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/sendemail-validate.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/post-update.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-applypatch.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/applypatch-msg.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/pre-rebase.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/hooks/push-to-checkout.sample (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/refs
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/refs/heads
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/refs/heads/main (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/refs/tags
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/refs/remotes
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/refs/remotes/origin
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/refs/remotes/origin/main (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/refs/remotes/origin/HEAD (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/FETCH_HEAD (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/04
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/04/3bbbb0dc3cc1d12e65beb15b88b09db26452a9 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/45
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/45/d0877bc3356874ab27f31aee6e298df04782c7 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/1c
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/1c/1e600e493670c6a6b9a452d241aab72f3add6c (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/1c/9ea462225d263fd70770cbf11e2aa0ed4dce41 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/82
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/82/f0d2d0885d966404369aea874e7ffec1302da3 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/9d
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/9d/50c7e8334d28a1cf66f866c0317bf58ddb8b80 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/info
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/43
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/objects/43/bf7599b88f520bb6a0e29d8f0cb9b21c232f61 (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/objects/pack
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.git/info
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/info/exclude (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/config.worktree (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/HEAD (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.git/index (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/README.md (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.github
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Traversing /home/runner/work/copilot-template/copilot-template/.github/workflows
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/.github/workflows/codeql.yml (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Ignoring /home/runner/work/copilot-template/copilot-template/LICENSE (filter)
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Writing interpreter trap
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Closing down workers
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] Finder path: ['/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] sys path: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python3src.zip', '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] StubFinder: can't find ODASA_TOOLS, using '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools' instead
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] built-in extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] thrift extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] Python extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] package extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [3] file extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] Finder path: ['/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] sys path: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python3src.zip', '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] StubFinder: can't find ODASA_TOOLS, using '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools' instead
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] built-in extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] thrift extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] Python extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] package extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [4] file extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] Finder path: ['/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] sys path: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python3src.zip', '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] StubFinder: can't find ODASA_TOOLS, using '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools' instead
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] Finder path: ['/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] sys path: ['/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools/python3src.zip', '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload']
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] StubFinder: can't find ODASA_TOOLS, using '/opt/hostedtoolcache/CodeQL/2.22.1/x64/codeql/python/tools' instead
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] built-in extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] thrift extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] Python extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] package extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [2] file extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] built-in extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] thrift extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] Python extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] package extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] [1] file extractor time 0.0s
+[2025-07-11 14:40:01] [build-stdout] [INFO] Processed 0 modules in 0.14s
+[2025-07-11 14:40:01] [build-stdout] [DEBUG] Done.
+[2025-07-11 14:40:01] Terminating normally.

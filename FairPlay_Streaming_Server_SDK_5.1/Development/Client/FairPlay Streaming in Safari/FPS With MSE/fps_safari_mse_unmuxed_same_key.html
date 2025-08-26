@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <!-- See LICENSE.txt for this sample code's licensing information. -->
+    
+    <!-- Usage Notes:
+    
+    The WebKit-prefixed EME specification:
+        https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html
+    is supported starting in iOS/iPadOS 11.3 and macOS 10.10.3.
+    
+    The Modern EME specification:
+        https://w3c.github.io/encrypted-media/
+    is supported starting on iOS/iPadOS 12.2 and macOS 10.14.4.
+    
+    At least 4 adjustments need to be made for functionality and to meet the needs of the integrator:
+    a) update path to your FPS certificate
+    b) update path to your Key Security Module (KSM)
+    c) update for the CKC extraction from the POST according to your client protocol
+    d) update for the fMP4 init data segments and payload for audio and video tracks
+    
+    The sections requiring tweaking are marked with the "ADAPT" comment in the code below,
+    and in the `fps_safari_support.js` script file.
+    -->
+
+    <head>
+        <title>FPS Template</title>
+        <script src="../fps_safari_support.js"></script>
+        <script>
+            
+            let serverCertificatePath = '…/fps_certificate.der'; // ADAPT: Path/URL to the FPS certificate on your server.
+            let serverProcessSPCPath  = '…/keyservermodule';     // ADAPT: Path/URL to the keyserver module that processes the SPC and returns a CKC.
+            
+            async function startVideo()
+            {
+                let video = document.querySelector('video');
+                video.addEventListener('error', onerror, false);
+                
+                let mediaSource = new MediaSource;
+                video.srcObject = mediaSource;
+                await waitFor(mediaSource, 'sourceopen');
+                
+                let sourceBuffer1 = mediaSource.addSourceBuffer('audio/mp4');
+                let sourceBuffer2 = mediaSource.addSourceBuffer('video/mp4');
+                
+                // ADAPT: Build your audio and video tracks.
+                await fetchAndWaitForEncrypted(video, sourceBuffer1, 'content/elementary-stream-audio-header-keyid-1.m4a');
+                await fetchAndAppend(sourceBuffer2, 'content/elementary-stream-video-header-keyid-1.m4v');
+                await fetchAndAppend(sourceBuffer1, 'content/elementary-stream-audio-payload.m4a');
+                await fetchAndAppend(sourceBuffer2, 'content/elementary-stream-video-payload.m4v');
+            }
+            
+            function onerror(event) {
+                window.console.error('A video playback error occurred')
+            }
+            
+            async function encrypted(event) {
+                try {
+                    let initDataType = event.initDataType;
+                    if (initDataType !== 'sinf') {
+                        window.console.error(`Received unexpected initialization data type "${initDataType}"`);
+                        return;
+                    }
+                    
+                    let video = event.target;
+                    if (!video.mediaKeys) {
+                        let access = await navigator.requestMediaKeySystemAccess("com.apple.fps", [{
+                            initDataTypes: [initDataType],
+                            audioCapabilities: [{ contentType: 'audio/mp4', robustness: '' }],
+                            videoCapabilities: [{ contentType: 'video/mp4', robustness: '' }],
+                            distinctiveIdentifier: 'not-allowed',
+                            persistentState: 'not-allowed',
+                            sessionTypes: ['temporary'],
+                        }]);
+                        
+                        let keys = await access.createMediaKeys();
+                        await keys.setServerCertificate(window.certificate);
+                        await video.setMediaKeys(keys);
+                    }
+                    
+                    let initData = event.initData;
+                    
+                    let session = video.mediaKeys.createSession();
+                    session.generateRequest(initDataType, initData);
+                    
+                    let message = await waitFor(session, 'message');
+                    let response = await getResponse(message, serverProcessSPCPath, 'skd://twelve');
+                    await session.update(response);
+                    
+                    return session;
+                } catch(e) {
+                    window.console.error(`Could not start encrypted playback due to exception "${e}"`)
+                }
+            }
+            
+            window.addEventListener('load', loadCertificate, {once: true});
+        </script>
+    </head>
+    <body>
+        <video controls autoplay preload="auto" width=960></video>
+    </body>
+</html>
+
